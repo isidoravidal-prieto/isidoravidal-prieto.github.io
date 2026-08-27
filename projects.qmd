@@ -1,0 +1,5 @@
+---
+title: "Projects"
+---
+
+Contenido próximamente. Acá van las tarjetas/enlaces a cada proyecto en projects/.
