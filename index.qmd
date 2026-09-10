@@ -1,5 +1,13 @@
 ---
-title: "Home"
+pagetitle: "Isidora Vidal — Geospatial Analyst"
 ---
 
-Contenido próximamente.
+<div class="column-screen home-hero">
+<div class="home-hero-panel">
+<div class="hero-name">Isidora Vidal</div>
+<p><strong>Geospatial Analyst · Remote Sensing · Spatial Data Science</strong></p>
+<p class="hero-bio">I'm a geospatial analyst who turns satellite imagery and spatial data into concrete answers: how dry vegetation is before fire season, where a wildfire actually burned, how much water remains in a lake affected by years of drought, how much soil is eroding on a hillside. My recent work spans machine learning applied to remote sensing, water resource monitoring, and RUSLE based erosion modeling built for an external client, developed end to end in Google Earth Engine, Python and R, and communicated through clear cartography for both technical and non technical audiences. I run large scale raster processing on cloud platforms like JupyterHub and Dask, and I'm equally comfortable in QGIS and ArcGIS for the cartographic side of a project. I'm most drawn to environmental monitoring, water and climate risk, and public health applications, and I like owning a problem from raw data through to a finished map or model without needing much oversight along the way. I'm currently looking for remote opportunities in geospatial analysis, remote sensing or spatial data science.</p>
+<a class="btn btn-primary" href="projects.qmd" role="button">View my projects</a>
+<a class="btn btn-outline-secondary" href="contact.qmd" role="button">Get in touch</a>
+</div>
+</div>

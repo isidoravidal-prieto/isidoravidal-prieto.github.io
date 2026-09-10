@@ -1,0 +1,32 @@
+---
+pagetitle: "Gallery"
+---
+
+
+# Gallery
+
+A collection of smaller maps and visualizations from ongoing and past work.
+
+### Urban Environment Cartography — Santiago Metropolitan Region
+
+Descriptive cartography from an ongoing research panel on urban environment and health outcomes across the 33 communes of the Santiago Metropolitan Region.
+
+![Reference map of the 33 communes in the study area](/images/mapa_referencia_comunas.png){fig-align="center" width="70%"}
+
+![Land Surface Temperature comparison, 2009 vs. 2020](/images/mapa_lst_comparacion_2009_2020.png){fig-align="center" width="70%"}
+
+![Population density, 2020](/images/mapa_densidad_2020.png){fig-align="center" width="70%"}
+
+![Distance to nearest health facility, 2019](/images/mapa_dist_salud_2019.png){fig-align="center" width="70%"}
+
+![Migration patterns, 2017](/images/mapa_migracion_2017.png){fig-align="center" width="70%"}
+
+![Wellbeing index (BHT) dimensions, 2017](/images/mapa_bht_dimensiones_2017.png){fig-align="center" width="70%"}
+
+![Road network density](/images/mapa_vias_densidad.png){fig-align="center" width="70%"}
+
+### Glacier Variations
+
+![Study area](/images/area_estudio_glaciares.png){fig-align="center" width="50%"}
+
+![Glacier area variations](/images/variaciones_glaciares.png){fig-align="center" width="50%"}

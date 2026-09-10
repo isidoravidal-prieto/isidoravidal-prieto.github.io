@@ -1,0 +1,40 @@
+---
+pagetitle: "Hydric Erosion Risk Mapping"
+---
+
+# Hydric Erosion Risk Mapping
+
+::: {.page-subtitle}
+**RUSLE · Google Earth Engine · QGIS**
+:::
+
+Freelance engagement for an environmental engineering client, mapping soil water erosion risk across four departments in Guatemala (Alta Verapaz, Quiché, Sololá and Sacatepéquez) using the RUSLE (Revised Universal Soil Loss Equation) methodology, entirely processed in Google Earth Engine and finished in QGIS for cartographic delivery.
+
+![Water erosion risk map, Sacatepéquez department, Guatemala](/images/Mapa_Erosion_Sacatepequez.jpg){fig-align="center" width="80%" style="margin-left: 1%;"}
+
+---
+
+
+### How it works
+
+RUSLE estimates average annual soil loss as the product of five factors: rainfall erosivity, soil erodibility, slope length and steepness, vegetation cover, and conservation practices. Each factor was derived from a different public dataset and combined natively in Earth Engine:
+
+- Rainfall erosivity from 25 years of CHIRPS daily precipitation, converted via the Modified Fournier Index
+- Soil erodibility from SoilGrids texture and organic carbon data
+- Slope and flow length from Copernicus DEM and HydroSHEDS, capped to avoid overestimation near stream channels
+- Vegetation cover from 10 years of Sentinel-2 NDVI
+- Conservation practices held at a neutral baseline, in the absence of field survey data
+
+### Results
+
+For Sacatepéquez, average annual soil loss came out to 3.66 tons/ha/year, classified as light erosion under FAO/MAGA standards, though the picture isn't uniform: about 42% of the department sits at or below 1 ton/ha/year, while 22% exceeds 10 tons/ha/year, concentrated in steep, sparsely vegetated terrain. The same workflow was applied across all four departments, giving the client a consistent, reproducible basis for comparing erosion risk across very different landscapes.
+
+### Note
+
+Every RUSLE input carries known simplifications, worth naming rather than hiding: soil data gaps were filled with departmental averages, the slope-length factor used a fixed exponent rather than a slope-variable one, and inputs at different native resolutions were resampled to a common 10 m grid, which can cluster identical values in low-erosion zones. None of these change the overall pattern, but they matter for anyone using the absolute numbers rather than the relative risk zones.
+
+
+<a href="https://github.com/isidoravidal-prieto/guatemala-erosion-rusle/blob/main/RUSLE_sacatepequez.js" class="btn btn-outline-dark btn-sm" target="_blank">View code on GitHub</a>
+
+
+

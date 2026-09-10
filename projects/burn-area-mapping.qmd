@@ -1,0 +1,30 @@
+---
+pagetitle: "Burn Area Mapping"
+---
+
+# Burn Area Mapping
+
+::: {.page-subtitle}
+**Sentinel-2 · dNBR · Data Cube Chile**
+:::
+
+Fire severity leaves a distinct spectral signature: healthy vegetation and burnt vegetation reflect light very differently in the near infrared and shortwave infrared bands. The Normalized Burn Ratio (NBR) captures that difference, and comparing NBR before and after a fire, the Delta NBR (dNBR), isolates exactly what burned.
+
+![dNBR map of the San Carlos de Apoquindo fire, Las Condes, December 2025](/images/burn-area-dnbr.png){fig-align="center" width="80%"}
+
+### How it works
+
+-   Build a baseline NBR composite from pre-fire Sentinel-2 imagery
+-   Compute post-fire NBR from imagery captured after the event
+-   Subtract the two to get dNBR: positive values indicate burned vegetation, negative or near-zero values indicate unburnt areas
+-   Apply a threshold to dNBR to classify pixels as burned or unburned, then sum the burned area
+
+### Results
+
+Applied to the San Carlos de Apoquindo fire (Las Condes, December 2025), using a dNBR threshold of +0.3. The resulting burned area estimate, 1,024 ha, came out very close to CONAF's official figure of 1,012 ha for the same event — a strong sanity check for a method with no site-specific calibration.
+
+### Note
+
+The +0.3 threshold was carried over from the original methodology without testing alternatives for this specific fire. [Rahman et al. (2018)](https://ieeexplore.ieee.org/document/8518449) suggest +0.1 as a general threshold for Sentinel-2, and different vegetation types can call for different values. That the result still landed close to the official figure is encouraging, but a more rigorous version of this workflow would test a range of thresholds against ground-truth data rather than relying on one.
+
+<a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/Areas_quemadas_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">View notebook on GitHub</a>

@@ -1,5 +1,26 @@
 ---
-title: "Fuel Moisture Content & Burn Area Mapping"
+pagetitle: "FMC"
 ---
 
-Contenido próximamente.
+# Fuel Moisture Content 
+
+::: {.page-subtitle}
+**Random Forest · Sentinel-2 · Data Cube Chile**
+:::
+
+Fuel Moisture Content (FMC) measures how much water live vegetation holds, a direct signal of how easily it can catch and sustain fire. I built a pipeline to generate it for a Chilean national park from raw Sentinel-2 imagery, using a Random Forest model originally trained on Australian vegetation, since no ready-made FMC product exists for Chile.
+
+![FMC at the start of the fire season versus its peak in late summer](/images/fmc-seasonal-comparison.png)
+
+![Monthly average FMC across Parque Nacional Río Clarillo, 2024](/images/fmc-monthly-timeseries.png)
+
+### How it works
+
+- Load raw Sentinel-2 bands and mask clouds, shadows and water using the Scene Classification Layer
+- Compute NDVI and NDII, the two indices the model requires
+- Run the pretrained Random Forest pixel by pixel to produce a continuous FMC surface
+- Diagnose per-scene cloud coverage to pick usable dates, since there's no pre-filtered product to fall back on
+
+The result tracks the expected seasonal pattern for a Mediterranean climate: vegetation dries out toward late summer and recovers with the winter rains, showing that a model trained on Australian fuel types transfers reasonably well to Chilean vegetation.
+
+<a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/FMC_adaptado_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">View notebook on GitHub</a>

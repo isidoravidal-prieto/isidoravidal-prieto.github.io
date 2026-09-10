@@ -20,7 +20,7 @@ p:has(img) {
 }
 
 .home-hero {
-  background-image: linear-gradient(rgba(59, 47, 42, 0.45), rgba(59, 47, 42, 0.45)), url('/images/fondo.JPG');
+  background-image: linear-gradient(rgba(59, 47, 42, 0.45), rgba(59, 47, 42, 0.45)), url('images/fondo.JPG');
   background-size: cover;
   background-position: center;
   min-height: 80vh;

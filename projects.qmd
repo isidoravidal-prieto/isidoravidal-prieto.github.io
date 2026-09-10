@@ -1,5 +1,49 @@
 ---
-title: "Projects"
+pagetitle: "Isidora Vidal — Projects"
 ---
 
-Contenido próximamente. Acá van las tarjetas/enlaces a cada proyecto en projects/.
+# Projects
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Fuel Moisture Content</h5>
+<p class="card-text">Machine learning pipeline (Random Forest) estimating vegetation fuel moisture content from Sentinel-2 imagery to support wildfire risk assessment.</p>
+<a href="projects/fmc-burn-mapping.qmd" class="btn btn-outline-primary btn-sm">View project</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Water Extent Monitoring</h5>
+<p class="card-text">Satellite-based time series tracking seasonal water extent in a Chilean reservoirs, combining spectral indices with change detection across multiple years.</p>
+<a href="projects/water-monitoring.qmd" class="btn btn-outline-primary btn-sm">View project</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Hydric Erosion Risk Mapping</h5>
+<p class="card-text">RUSLE-based erosion risk modeling for an environmental engineering client, translating remote sensing and terrain data into an actionable risk map.</p>
+<a href="projects/erosion-guatemala.qmd" class="btn btn-outline-primary btn-sm">View project</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Burn Area Mapping</h5>
+<p class="card-text">Sentinel-2 based burn severity mapping using Normalized Burn Ratio (dNBR) change detection, validated against official CONAF burned-area figures for a real 2025 wildfire.</p>
+<a href="projects/burn-area-mapping.qmd" class="btn btn-outline-primary btn-sm">View project</a>
+</div>
+</div>
+</div>
+
+</div>

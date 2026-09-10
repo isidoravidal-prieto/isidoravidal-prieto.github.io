@@ -1,5 +1,39 @@
 ---
-title: "Water Extent & Quality Monitoring"
+pagetitle: "Isidora Vidal — Water Extent Monitoring"
 ---
 
-Contenido próximamente.
+# Water Extent Monitoring
+
+::: {.page-subtitle}
+**Sentinel-2 · MNDWI · Data Cube Chile**
+:::
+
+Laguna de Aculeo, in Chile's Metropolitan Region, dried up completely in 2018 after years of drought and overextraction, becoming one of the country's most visible symbols of water scarcity. Since 2023 it has been slowly recovering with heavier winter rains, most recently after a frontal storm in July 2026. I built a pipeline to track that extent change directly from satellite imagery, following the UN SDG 6.6.1 indicator framework for water-related ecosystem change.
+
+The animation below shows the lake's water index (MNDWI) shifting season by season, making the collapse and recovery visible over time rather than as a single before-and-after snapshot.
+
+![Seasonal MNDWI animation showing the lake's extent shifting over time](/images/water_extent.gif){fig-align="center" width="70%"}
+
+Turning that index into an actual area gives a concrete number to track instead of just a visual impression:
+
+::: {.column-page}
+![Seasonal water extent in square kilometers](/images/aculeo-extent-timeseries.png){fig-align="center" width="130%"}
+:::
+
+Finally, comparing the driest and wettest periods on record shows exactly where the water surface expanded or stayed permanent, not just how much:
+
+![Where the water surface changed between the driest and wettest periods on record](/images/aculeo-cambio-map.png){fig-align="center" width="70%"}
+
+### How it works
+
+- Load Sentinel-2 imagery over the lake and compute the Modified Normalized Difference Water Index (MNDWI), which separates water from land far more reliably than a simple visual check
+- Resample the MNDWI time series to seasonal medians to smooth out cloud noise and short-term variation
+- Animate the seasonal series to visualize how the water surface has moved over time
+- Convert the water mask to an area in square kilometers at each time step, producing a quantitative extent time series
+- Identify the minimum and maximum extent on record and map exactly where the surface expanded, disappeared, or stayed stable between them
+
+### Results
+
+The extent time series makes the lake's collapse and partial recovery visible in concrete numbers, not just striking before-and-after photos. It's a clear demonstration of how a few lines of satellite index math can turn a well known environmental story into something measurable and trackable over time, useful well beyond this one lake.
+
+<a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/Monitoreo_agua_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">View notebook on GitHub</a>
