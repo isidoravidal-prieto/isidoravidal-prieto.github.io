@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, .navbar, .btn {
+  font-family: 'Jost', sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+p:has(img) {
+  text-align: center;
+}
+
+.gallery-thumb {
+  max-height: 160px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.home-hero {
+  background-image: linear-gradient(rgba(59, 47, 42, 0.45), rgba(59, 47, 42, 0.45)), url('images/fondo.JPG');
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.home-hero-panel {
+  background-color: rgba(243, 233, 220, 0.92);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+.home-hero-panel .btn {
+  margin: 0.3rem;
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2F4F3E;
+  margin-bottom: 0.5rem;
+}
+
+.home-hero-panel p {
+  text-align: center;
+}
+
+.page-subtitle p {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.home-hero-panel p.hero-bio {
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body p {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+

@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\n\n\n\n\n\nFuel Moisture Content\n\n\nMachine learning pipeline (Random Forest) estimating vegetation fuel moisture content from Sentinel-2 imagery to support wildfire risk assessment.\n\nView project\n\n\n\n\n\n\n\nWater Extent Monitoring\n\n\nSatellite-based time series tracking seasonal water extent in a Chilean reservoirs, combining spectral indices with change detection across multiple years.\n\nView project\n\n\n\n\n\n\n\nHydric Erosion Risk Mapping\n\n\nRUSLE-based erosion risk modeling for an environmental engineering client, translating remote sensing and terrain data into an actionable risk map.\n\nView project\n\n\n\n\n\n\n\nBurn Area Mapping\n\n\nSentinel-2 based burn severity mapping using Normalized Burn Ratio (dNBR) change detection, validated against official CONAF burned-area figures for a real 2025 wildfire.\n\nView project"
+  },
+  {
+    "objectID": "projects/gallery.html",
+    "href": "projects/gallery.html",
+    "title": "Gallery",
+    "section": "",
+    "text": "Gallery\nA collection of smaller maps and visualizations from ongoing and past work.\n\nUrban Environment Cartography — Santiago Metropolitan Region\nDescriptive cartography from an ongoing research panel on urban environment and health outcomes across the 33 communes of the Santiago Metropolitan Region.\n\n\n\nReference map of the 33 communes in the study area\n\n\n\n\n\nLand Surface Temperature comparison, 2009 vs. 2020\n\n\n\n\n\nPopulation density, 2020\n\n\n\n\n\nDistance to nearest health facility, 2019\n\n\n\n\n\nMigration patterns, 2017\n\n\n\n\n\nWellbeing index (BHT) dimensions, 2017\n\n\n\n\n\nRoad network density\n\n\n\n\nGlacier Variations\n\n\n\nStudy area\n\n\n\n\n\nGlacier area variations"
+  },
+  {
+    "objectID": "projects/erosion-guatemala.html",
+    "href": "projects/erosion-guatemala.html",
+    "title": "Hydric Erosion Risk Mapping",
+    "section": "",
+    "text": "Hydric Erosion Risk Mapping\n\nRUSLE · Google Earth Engine · QGIS\n\nFreelance engagement for an environmental engineering client, mapping soil water erosion risk across four departments in Guatemala (Alta Verapaz, Quiché, Sololá and Sacatepéquez) using the RUSLE (Revised Universal Soil Loss Equation) methodology, entirely processed in Google Earth Engine and finished in QGIS for cartographic delivery.\n\n\n\nWater erosion risk map, Sacatepéquez department, Guatemala\n\n\n\n\nHow it works\nRUSLE estimates average annual soil loss as the product of five factors: rainfall erosivity, soil erodibility, slope length and steepness, vegetation cover, and conservation practices. Each factor was derived from a different public dataset and combined natively in Earth Engine:\n\nRainfall erosivity from 25 years of CHIRPS daily precipitation, converted via the Modified Fournier Index\nSoil erodibility from SoilGrids texture and organic carbon data\nSlope and flow length from Copernicus DEM and HydroSHEDS, capped to avoid overestimation near stream channels\nVegetation cover from 10 years of Sentinel-2 NDVI\nConservation practices held at a neutral baseline, in the absence of field survey data\n\n\n\nResults\nFor Sacatepéquez, average annual soil loss came out to 3.66 tons/ha/year, classified as light erosion under FAO/MAGA standards, though the picture isn’t uniform: about 42% of the department sits at or below 1 ton/ha/year, while 22% exceeds 10 tons/ha/year, concentrated in steep, sparsely vegetated terrain. The same workflow was applied across all four departments, giving the client a consistent, reproducible basis for comparing erosion risk across very different landscapes.\n\n\nNote\nEvery RUSLE input carries known simplifications, worth naming rather than hiding: soil data gaps were filled with departmental averages, the slope-length factor used a fixed exponent rather than a slope-variable one, and inputs at different native resolutions were resampled to a common 10 m grid, which can cluster identical values in low-erosion zones. None of these change the overall pattern, but they matter for anyone using the absolute numbers rather than the relative risk zones.\nView code on GitHub"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Isidora Vidal\n\n\nGeospatial Analyst · Remote Sensing · Spatial Data Science\n\n\nI’m a geospatial analyst who turns satellite imagery and spatial data into concrete answers: how dry vegetation is before fire season, where a wildfire actually burned, how much water remains in a lake affected by years of drought, how much soil is eroding on a hillside. My recent work spans machine learning applied to remote sensing, water resource monitoring, and RUSLE based erosion modeling built for an external client, developed end to end in Google Earth Engine, Python and R, and communicated through clear cartography for both technical and non technical audiences. I run large scale raster processing on cloud platforms like JupyterHub and Dask, and I’m equally comfortable in QGIS and ArcGIS for the cartographic side of a project. I’m most drawn to environmental monitoring, water and climate risk, and public health applications, and I like owning a problem from raw data through to a finished map or model without needing much oversight along the way. I’m currently looking for remote opportunities in geospatial analysis, remote sensing or spatial data science.\n\nView my projects Get in touch"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Contact\nI’m currently looking for remote opportunities in geospatial analysis, remote sensing and spatial data science. Feel free to reach out through any of the channels below.\nEmail me LinkedIn GitHub Download CV (PDF)\n\nOr copy the address directly: isidora.vidal@ug.uchile.cl Copy"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Contenido próximamente. Acá va el link de descarga a files/isidora-vidal-cv.pdf."
+  },
+  {
+    "objectID": "projects/burn-area-mapping.html",
+    "href": "projects/burn-area-mapping.html",
+    "title": "Burn Area Mapping",
+    "section": "",
+    "text": "Burn Area Mapping\n\nSentinel-2 · dNBR · Data Cube Chile\n\nFire severity leaves a distinct spectral signature: healthy vegetation and burnt vegetation reflect light very differently in the near infrared and shortwave infrared bands. The Normalized Burn Ratio (NBR) captures that difference, and comparing NBR before and after a fire, the Delta NBR (dNBR), isolates exactly what burned.\n\n\n\ndNBR map of the San Carlos de Apoquindo fire, Las Condes, December 2025\n\n\n\nHow it works\n\nBuild a baseline NBR composite from pre-fire Sentinel-2 imagery\nCompute post-fire NBR from imagery captured after the event\nSubtract the two to get dNBR: positive values indicate burned vegetation, negative or near-zero values indicate unburnt areas\nApply a threshold to dNBR to classify pixels as burned or unburned, then sum the burned area\n\n\n\nResults\nApplied to the San Carlos de Apoquindo fire (Las Condes, December 2025), using a dNBR threshold of +0.3. The resulting burned area estimate, 1,024 ha, came out very close to CONAF’s official figure of 1,012 ha for the same event — a strong sanity check for a method with no site-specific calibration.\n\n\nNote\nThe +0.3 threshold was carried over from the original methodology without testing alternatives for this specific fire. Rahman et al. (2018) suggest +0.1 as a general threshold for Sentinel-2, and different vegetation types can call for different values. That the result still landed close to the official figure is encouraging, but a more rigorous version of this workflow would test a range of thresholds against ground-truth data rather than relying on one.\nView notebook on GitHub"
+  },
+  {
+    "objectID": "projects/fmc-burn-mapping.html",
+    "href": "projects/fmc-burn-mapping.html",
+    "title": "Fuel Moisture Content",
+    "section": "",
+    "text": "Fuel Moisture Content\n\nRandom Forest · Sentinel-2 · Data Cube Chile\n\nFuel Moisture Content (FMC) measures how much water live vegetation holds, a direct signal of how easily it can catch and sustain fire. I built a pipeline to generate it for a Chilean national park from raw Sentinel-2 imagery, using a Random Forest model originally trained on Australian vegetation, since no ready-made FMC product exists for Chile.\n\n\n\nFMC at the start of the fire season versus its peak in late summer\n\n\n\n\n\nMonthly average FMC across Parque Nacional Río Clarillo, 2024\n\n\n\nHow it works\n\nLoad raw Sentinel-2 bands and mask clouds, shadows and water using the Scene Classification Layer\nCompute NDVI and NDII, the two indices the model requires\nRun the pretrained Random Forest pixel by pixel to produce a continuous FMC surface\nDiagnose per-scene cloud coverage to pick usable dates, since there’s no pre-filtered product to fall back on\n\nThe result tracks the expected seasonal pattern for a Mediterranean climate: vegetation dries out toward late summer and recovers with the winter rains, showing that a model trained on Australian fuel types transfers reasonably well to Chilean vegetation.\nView notebook on GitHub"
+  },
+  {
+    "objectID": "projects/water-monitoring.html",
+    "href": "projects/water-monitoring.html",
+    "title": "Water Extent Monitoring",
+    "section": "",
+    "text": "Water Extent Monitoring\n\nSentinel-2 · MNDWI · Data Cube Chile\n\nLaguna de Aculeo, in Chile’s Metropolitan Region, dried up completely in 2018 after years of drought and overextraction, becoming one of the country’s most visible symbols of water scarcity. Since 2023 it has been slowly recovering with heavier winter rains, most recently after a frontal storm in July 2026. I built a pipeline to track that extent change directly from satellite imagery, following the UN SDG 6.6.1 indicator framework for water-related ecosystem change.\nThe animation below shows the lake’s water index (MNDWI) shifting season by season, making the collapse and recovery visible over time rather than as a single before-and-after snapshot.\n\n\n\nSeasonal MNDWI animation showing the lake’s extent shifting over time\n\n\nTurning that index into an actual area gives a concrete number to track instead of just a visual impression:\n\n\n\n\nSeasonal water extent in square kilometers\n\n\n\nFinally, comparing the driest and wettest periods on record shows exactly where the water surface expanded or stayed permanent, not just how much:\n\n\n\nWhere the water surface changed between the driest and wettest periods on record\n\n\n\nHow it works\n\nLoad Sentinel-2 imagery over the lake and compute the Modified Normalized Difference Water Index (MNDWI), which separates water from land far more reliably than a simple visual check\nResample the MNDWI time series to seasonal medians to smooth out cloud noise and short-term variation\nAnimate the seasonal series to visualize how the water surface has moved over time\nConvert the water mask to an area in square kilometers at each time step, producing a quantitative extent time series\nIdentify the minimum and maximum extent on record and map exactly where the surface expanded, disappeared, or stayed stable between them\n\n\n\nResults\nThe extent time series makes the lake’s collapse and partial recovery visible in concrete numbers, not just striking before-and-after photos. It’s a clear demonstration of how a few lines of satellite index math can turn a well known environmental story into something measurable and trackable over time, useful well beyond this one lake.\nView notebook on GitHub"
+  }
+]
