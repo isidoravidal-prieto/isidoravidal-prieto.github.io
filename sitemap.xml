@@ -1,39 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://isidoravidal-prieto.github.io/projects.html</loc>
+    <loc>https://isidoravidal-prieto.github.io/projects/elqui-topographic-analysis-es.html</loc>
+    <lastmod>2026-09-30T13:30:10.471Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/index-es.html</loc>
+    <lastmod>2026-09-29T19:13:58.418Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects/water-monitoring.html</loc>
+    <lastmod>2026-09-29T15:31:32.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects/fmc-burn-mapping.html</loc>
+    <lastmod>2026-09-29T15:30:59.364Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects/elqui-topographic-analysis.html</loc>
+    <lastmod>2026-09-29T16:08:00.700Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/index.html</loc>
+    <lastmod>2026-09-30T13:19:28.367Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/projects.html</loc>
+    <lastmod>2026-09-29T14:41:01.921Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/projects/gallery.html</loc>
+    <lastmod>2026-09-30T13:14:55.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/projects/erosion-guatemala.html</loc>
     <lastmod>2026-09-10T19:13:04.341Z</lastmod>
   </url>
   <url>
-    <loc>https://isidoravidal-prieto.github.io/projects/gallery.html</loc>
+    <loc>https://isidoravidal-prieto.github.io/en/projects/burn-area-mapping.html</loc>
     <lastmod>2026-09-10T19:13:04.341Z</lastmod>
   </url>
   <url>
-    <loc>https://isidoravidal-prieto.github.io/projects/erosion-guatemala.html</loc>
+    <loc>https://isidoravidal-prieto.github.io/en/cv.html</loc>
+    <lastmod>2026-09-10T19:13:04.225Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/contact.html</loc>
+    <lastmod>2026-09-29T18:13:13.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/index.html</loc>
+    <lastmod>2026-09-30T13:22:00.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/projects/elqui-topographic-analysis.html</loc>
+    <lastmod>2026-09-29T14:39:12.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/projects/fmc-burn-mapping.html</loc>
     <lastmod>2026-09-10T19:13:04.341Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/en/projects/water-monitoring.html</loc>
+    <lastmod>2026-09-10T19:13:04.341Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/contact.html</loc>
+    <lastmod>2026-09-30T12:53:26.786Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects/burn-area-mapping.html</loc>
+    <lastmod>2026-09-29T15:29:49.540Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects/erosion-guatemala.html</loc>
+    <lastmod>2026-09-29T15:28:30.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects/gallery.html</loc>
+    <lastmod>2026-09-30T13:16:20.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isidoravidal-prieto.github.io/es/projects.html</loc>
+    <lastmod>2026-09-29T18:03:39.344Z</lastmod>
   </url>
   <url>
     <loc>https://isidoravidal-prieto.github.io/index.html</loc>
-    <lastmod>2026-09-10T19:13:04.341Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isidoravidal-prieto.github.io/contact.html</loc>
-    <lastmod>2026-09-10T19:13:04.225Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isidoravidal-prieto.github.io/cv.html</loc>
-    <lastmod>2026-09-10T19:13:04.225Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isidoravidal-prieto.github.io/projects/burn-area-mapping.html</loc>
-    <lastmod>2026-09-10T19:13:04.341Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isidoravidal-prieto.github.io/projects/fmc-burn-mapping.html</loc>
-    <lastmod>2026-09-10T19:13:04.341Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isidoravidal-prieto.github.io/projects/water-monitoring.html</loc>
-    <lastmod>2026-09-10T19:13:04.341Z</lastmod>
+    <lastmod>2026-09-29T18:25:05.196Z</lastmod>
   </url>
 </urlset>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hydric Erosion Risk Mapping – Portfolio</title>
+<title>Isidora Vidal — Projects – Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../navbar-language.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -97,17 +98,34 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects.html"> 
+    <a class="nav-link active" href="../en/projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/gallery.html"> 
+    <a class="nav-link" href="../en/projects/gallery.html"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contact.html"> 
+    <a class="nav-link" href="../en/contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-language" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🌐 Language</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-language">    
+        <li>
+    <a class="dropdown-item" href="../en/index.html">
+ <span class="dropdown-text">ᴇɴ English</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../es/index.html">
+ <span class="dropdown-text">🇪🇸 Español</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -126,41 +144,77 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="hydric-erosion-risk-mapping" class="level1">
-<h1>Hydric Erosion Risk Mapping</h1>
-<div class="page-subtitle">
-<p><strong>RUSLE · Google Earth Engine · QGIS</strong></p>
+<section id="projects" class="level1">
+<h1>Projects</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored" data-anchor-id="projects">
+Elqui River Basin: Topographic Analysis
+</h5>
+<p class="card-text">
+Topographic analysis of the Elqui River Basin using a Copernicus GLO-30 digital elevation model, combining Google Earth Engine and QGIS to visualize terrain, generate hillshade and hypsometric maps, and produce elevation profiles.
+</p>
+<p><a href="../en/projects/elqui-topographic-analysis.html" class="btn btn-outline-primary btn-sm">View project</a></p>
 </div>
-<p>Freelance engagement for an environmental engineering client, mapping soil water erosion risk across four departments in Guatemala (Alta Verapaz, Quiché, Sololá and Sacatepéquez) using the RUSLE (Revised Universal Soil Loss Equation) methodology, entirely processed in Google Earth Engine and finished in QGIS for cartographic delivery.</p>
-<div class="quarto-figure quarto-figure-center" style="margin-left: 1%;">
-<figure class="figure">
-<p><img src="..\images/Mapa_Erosion_Sacatepequez.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Water erosion risk map, Sacatepéquez department, Guatemala</figcaption>
-</figure>
 </div>
-<hr>
-<section id="how-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-works">How it works</h3>
-<p>RUSLE estimates average annual soil loss as the product of five factors: rainfall erosivity, soil erodibility, slope length and steepness, vegetation cover, and conservation practices. Each factor was derived from a different public dataset and combined natively in Earth Engine:</p>
-<ul>
-<li>Rainfall erosivity from 25 years of CHIRPS daily precipitation, converted via the Modified Fournier Index</li>
-<li>Soil erodibility from SoilGrids texture and organic carbon data</li>
-<li>Slope and flow length from Copernicus DEM and HydroSHEDS, capped to avoid overestimation near stream channels</li>
-<li>Vegetation cover from 10 years of Sentinel-2 NDVI</li>
-<li>Conservation practices held at a neutral baseline, in the absence of field survey data</li>
-</ul>
-</section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">Results</h3>
-<p>For Sacatepéquez, average annual soil loss came out to 3.66 tons/ha/year, classified as light erosion under FAO/MAGA standards, though the picture isn’t uniform: about 42% of the department sits at or below 1 ton/ha/year, while 22% exceeds 10 tons/ha/year, concentrated in steep, sparsely vegetated terrain. The same workflow was applied across all four departments, giving the client a consistent, reproducible basis for comparing erosion risk across very different landscapes.</p>
-</section>
-<section id="note" class="level3">
-<h3 class="anchored" data-anchor-id="note">Note</h3>
-<p>Every RUSLE input carries known simplifications, worth naming rather than hiding: soil data gaps were filled with departmental averages, the slope-length factor used a fixed exponent rather than a slope-variable one, and inputs at different native resolutions were resampled to a common 10 m grid, which can cluster identical values in low-erosion zones. None of these change the overall pattern, but they matter for anyone using the absolute numbers rather than the relative risk zones.</p>
-<p><a href="https://github.com/isidoravidal-prieto/guatemala-erosion-rusle/blob/main/RUSLE_sacatepequez.js" class="btn btn-outline-dark btn-sm" target="_blank">View code on GitHub</a></p>
+</div>
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+Water Extent Monitoring
+</h5>
+<p class="card-text">
+Satellite-based time series tracking seasonal water extent in a Chilean reservoirs, combining spectral indices with change detection across multiple years.
+</p>
+<p><a href="../en/projects/water-monitoring.html" class="btn btn-outline-primary btn-sm">View project</a></p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+Hydric Erosion Risk Mapping
+</h5>
+<p class="card-text">
+RUSLE-based erosion risk modeling for an environmental engineering client, translating remote sensing and terrain data into an actionable risk map.
+</p>
+<p><a href="../en/projects/erosion-guatemala.html" class="btn btn-outline-primary btn-sm">View project</a></p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+Burn Area Mapping
+</h5>
+<p class="card-text">
+Sentinel-2 based burn severity mapping using Normalized Burn Ratio (dNBR) change detection, validated against official CONAF burned-area figures for a real 2025 wildfire.
+</p>
+<p><a href="../en/projects/burn-area-mapping.html" class="btn btn-outline-primary btn-sm">View project</a></p>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+Fuel Moisture Content
+</h5>
+<p class="card-text">
+Machine learning pipeline (Random Forest) estimating vegetation fuel moisture content from Sentinel-2 imagery to support wildfire risk assessment.
+</p>
+<p><a href="../en/projects/fmc-burn-mapping.html" class="btn btn-outline-primary btn-sm">View project</a></p>
+</div>
+</div>
+</div>
 
 
-</section>
+</div>
 </section>
 
 </main> <!-- /main -->
