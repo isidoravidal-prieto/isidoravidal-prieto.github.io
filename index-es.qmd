@@ -1,0 +1,20 @@
+---
+pagetitle: "Isidora Vidal — Analista Geoespacial"
+---
+
+<div class="column-screen home-hero">
+<div class="home-hero-panel">
+<div class="hero-name">Isidora Vidal</div>
+<p><strong>Analista Geoespacial · Teledetección · Ciencia de Datos Espaciales</strong></p>
+<p class="hero-bio">Soy Analista Geoespacial y Geógrafa especializada en teledetección, análisis de datos espaciales y aplicaciones ambientales.
+
+Trabajo con imágenes satelitales y datos geoespaciales para transformar preguntas ambientales complejas en mapas, modelos y resultados claros. Mi conjunto de herramientas incluye Google Earth Engine, Python, R, QGIS y ArcGIS.
+
+Mis principales áreas de interés son el monitoreo ambiental, el clima y los recursos hídricos, la biodiversidad y la ciencia de datos espaciales.
+
+**Actualmente busco oportunidades remotas en análisis geoespacial, teledetección y ciencia de datos espaciales.**
+.</p>
+<a class="btn btn-primary" href="projects-es.qmd" role="button">Ver mis proyectos</a>
+<a class="btn btn-outline-secondary" href="contact-es.qmd" role="button">Contacto</a>
+</div>
+</div>

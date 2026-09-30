@@ -1,0 +1,27 @@
+---
+pagetitle: "Isidora Vidal — Gallery"
+---
+
+# Gallery
+
+Descriptive cartography from an ongoing research project on the urban environment across the 33 communes of the Santiago Metropolitan Region.
+
+![Reference map of the 33 communes in the study area](/images/mapa_referencia_comunas.png){fig-cap="Reference map of the 33 communes in the study area" fig-align="center" width="70%"}
+
+![Land surface temperature comparison, 2009 vs. 2020](/images/mapa_lst_comparacion_2009_2020.png){fig-cap="Land surface temperature comparison, 2009 vs. 2020" fig-align="center" width="70%"}
+
+![Population density, 2020](/images/mapa_densidad_2020.png){fig-cap="Population density, 2020" fig-align="center" width="70%"}
+
+![Distance to the nearest health center, 2019](/images/mapa_dist_salud_2019.png){fig-cap="Distance to the nearest health center, 2019" fig-align="center" width="70%"}
+
+![Migration patterns, 2017](/images/mapa_migracion_2017.png){fig-cap="Migration patterns, 2017" fig-align="center" width="70%"}
+
+![Dimensions of the well-being index (BHT), 2017](/images/mapa_bht_dimensiones_2017.png){fig-cap="Dimensions of the well-being index (BHT), 2017" fig-align="center" width="70%"}
+
+![Road network density](/images/mapa_vias_densidad.png){fig-cap="Road network density" fig-align="center" width="70%"}
+
+# Glacier Variations
+
+![Lanin Volcano](/images/area_estudio_glaciares.png){fig-cap="Study area" fig-align="center" width="50%"}
+
+![Glacier area variations](/images/variaciones_glaciares.png){fig-cap="Glacier area variations" fig-align="center" width="50%"}

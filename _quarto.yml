@@ -3,17 +3,35 @@ project:
 
 website:
   title: "Portfolio"
+
   navbar:
     left:
       - text: Home
         href: index.qmd
+
       - text: Projects
-        href: projects.qmd
+        href: en/projects.qmd
+
       - text: Gallery
-        href: projects/gallery.qmd
+        href: en/projects/gallery.qmd
+
       - text: Contact
-        href: contact.qmd
+        href: en/contact.qmd
+
+    right:
+      - text: 🌐 Language
+        menu:
+          - text: ᴇɴ English
+            href: en/index.qmd
+
+          - text: 🇪🇸 Español
+            href: es/index.qmd
+
 format:
   html:
     theme: [flatly, custom.scss]
     css: styles.css
+    include-in-header:
+      - text: |
+          <script src="/navbar-language.js"></script>
+    

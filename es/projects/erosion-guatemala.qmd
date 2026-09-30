@@ -1,0 +1,37 @@
+---
+pagetitle: "Mapeo de Riesgo de Erosión Hídrica"
+---
+
+# Mapeo de Riesgo de Erosión Hídrica
+
+::: {.page-subtitle}
+**RUSLE · Google Earth Engine · QGIS**
+:::
+
+Trabajo freelance para un cliente de ingeniería ambiental, enfocado en el mapeo del riesgo de erosión hídrica del suelo en cuatro departamentos de Guatemala (Alta Verapaz, Quiché, Sololá y Sacatepéquez) utilizando la metodología RUSLE (Revised Universal Soil Loss Equation), procesada completamente en Google Earth Engine y finalizada en QGIS para la elaboración cartográfica.
+
+![Mapa de riesgo de erosión hídrica, departamento de Sacatepéquez, Guatemala](/images/Mapa_Erosion_Sacatepequez.jpg){fig-align="center" width="80%" style="margin-left: 1%;"}
+
+---
+
+
+### Cómo funciona
+
+RUSLE estima la pérdida media anual de suelo como el producto de cinco factores: erosividad de las precipitaciones, erodabilidad del suelo, longitud e inclinación de la pendiente, cobertura vegetal y prácticas de conservación. Cada factor se obtuvo a partir de un conjunto de datos público diferente y se integró directamente en Earth Engine:
+
+- Erosividad de las precipitaciones a partir de 25 años de precipitación diaria de CHIRPS, convertida mediante el Índice de Fournier Modificado
+- Erodabilidad del suelo a partir de datos de textura y carbono orgánico de SoilGrids
+- Pendiente y longitud de flujo a partir de Copernicus DEM y HydroSHEDS, limitadas para evitar la sobreestimación cerca de los cauces
+- Cobertura vegetal a partir de 10 años de NDVI de Sentinel-2
+- Las prácticas de conservación se mantuvieron en un nivel base neutral, debido a la ausencia de datos de terreno
+
+### Resultados
+
+Para Sacatepéquez, la pérdida media anual de suelo fue de 3,66 toneladas/ha/año, clasificada como erosión ligera según los estándares de FAO/MAGA. Sin embargo, el patrón no es uniforme: aproximadamente el 42 % del departamento presenta valores iguales o inferiores a 1 tonelada/ha/año, mientras que el 22 % supera las 10 toneladas/ha/año, concentrándose en terrenos con pendientes pronunciadas y escasa cobertura vegetal. El mismo flujo de trabajo se aplicó en los cuatro departamentos, proporcionando al cliente una base consistente y reproducible para comparar el riesgo de erosión entre paisajes con características muy diferentes.
+
+### Nota
+
+Cada insumo de RUSLE presenta simplificaciones conocidas que es importante explicitar: las áreas sin datos de suelo se completaron utilizando promedios departamentales, el factor de longitud de pendiente utilizó un exponente fijo en lugar de uno variable según la pendiente, y los insumos con diferentes resoluciones nativas fueron remuestreados a una cuadrícula común de 10 m, lo que puede generar agrupaciones de valores idénticos en zonas de baja erosión. Estas simplificaciones no modifican el patrón general, pero son relevantes para cualquier interpretación de los valores absolutos y no solo de las zonas de riesgo relativo.
+
+
+<a href="https://github.com/isidoravidal-prieto/guatemala-erosion-rusle/blob/main/RUSLE_sacatepequez.js" class="btn btn-outline-dark btn-sm" target="_blank">Ver código en GitHub</a>

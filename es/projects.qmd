@@ -1,0 +1,58 @@
+---
+pagetitle: "Isidora Vidal — Proyectos"
+---
+
+# Proyectos
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Cuenca del río Elqui: Análisis Topográfico</h5>
+<p class="card-text">Análisis topográfico de la cuenca del río Elqui utilizando un modelo digital de elevación Copernicus GLO-30, combinando Google Earth Engine y QGIS para visualizar el relieve, generar mapas de tinte hipsométrico y hillshade, y producir perfiles de elevación.</p>
+<a href="projects/elqui-topographic-analysis.qmd" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Monitoreo de Superficie de Agua</h5>
+<p class="card-text">Serie temporal basada en imágenes satelitales para monitorear la variación estacional de la superficie de agua en un embalse de Chile, combinando índices espectrales con detección de cambios a lo largo de varios años.</p>
+<a href="projects/water-monitoring.qmd" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Mapeo de Riesgo de Erosión Hídrica</h5>
+<p class="card-text">Modelación del riesgo de erosión basada en RUSLE para un cliente de ingeniería ambiental, integrando datos de teledetección y terreno para generar un mapa de riesgo aplicable a la evaluación ambiental.</p>
+<a href="projects/erosion-guatemala.qmd" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Mapeo de Áreas Quemadas</h5>
+<p class="card-text">Mapeo de severidad de áreas quemadas utilizando imágenes Sentinel-2 y detección de cambios mediante el Índice Normalizado de Área Quemada (dNBR), validado con cifras oficiales de superficie quemada de CONAF para un incendio forestal ocurrido en 2025.</p>
+<a href="projects/burn-area-mapping.qmd" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
+</div>
+</div>
+</div>
+
+<div class="col">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Contenido de Humedad del Combustible Vegetal</h5>
+<p class="card-text">Pipeline de aprendizaje automático basado en Random Forest para estimar el contenido de humedad del combustible vegetal a partir de imágenes Sentinel-2, como apoyo a la evaluación del riesgo de incendios forestales.</p>
+<a href="projects/fmc-burn-mapping.qmd" class="btn btn-outline-primary btn-sm">Ver proyecto</a>
+</div>
+</div>
+</div>

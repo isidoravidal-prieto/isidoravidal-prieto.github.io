@@ -1,0 +1,30 @@
+---
+pagetitle: "Mapeo de Áreas Quemadas"
+---
+
+# Mapeo de Áreas Quemadas
+
+::: {.page-subtitle}
+**Sentinel-2 · dNBR · Data Cube Chile**
+:::
+
+La severidad de un incendio deja una firma espectral característica: la vegetación sana y la vegetación quemada reflejan la luz de manera muy diferente en las bandas del infrarrojo cercano y del infrarrojo de onda corta. El Índice Normalizado de Quema (NBR) captura esta diferencia y, al comparar el NBR antes y después de un incendio, el Delta NBR (dNBR) permite identificar las áreas afectadas por la quema.
+
+![Mapa de dNBR del incendio de San Carlos de Apoquindo, Las Condes, diciembre de 2025](/images/burn-area-dnbr.png){fig-align="center" width="80%"}
+
+### Cómo funciona
+
+-   Construir un compuesto de NBR de referencia a partir de imágenes Sentinel-2 previas al incendio
+-   Calcular el NBR posterior al incendio a partir de imágenes capturadas después del evento
+-   Restar ambos valores para obtener el dNBR: los valores positivos indican vegetación quemada, mientras que los valores negativos o cercanos a cero indican áreas no quemadas
+-   Aplicar un umbral al dNBR para clasificar los píxeles como quemados o no quemados y luego calcular la superficie quemada total
+
+### Resultados
+
+Aplicado al incendio de San Carlos de Apoquindo (Las Condes, diciembre de 2025), utilizando un umbral de dNBR de +0,3. La superficie quemada estimada, 1.024 ha, resultó muy cercana a la cifra oficial de CONAF de 1.012 ha para el mismo evento, proporcionando una comprobación de consistencia para un método sin calibración específica para el sitio.
+
+### Nota
+
+El umbral de +0,3 se mantuvo de la metodología original sin probar alternativas específicas para este incendio. [Rahman et al. (2018)](https://ieeexplore.ieee.org/document/8518449) sugieren +0,1 como umbral general para Sentinel-2, y diferentes tipos de vegetación pueden requerir valores distintos. El hecho de que el resultado se aproximara a la cifra oficial es alentador, pero una versión más rigurosa de este flujo de trabajo debería probar un rango de umbrales frente a datos de referencia en terreno, en lugar de depender de uno solo.
+
+<a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/Areas_quemadas_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">Ver notebook en GitHub</a>

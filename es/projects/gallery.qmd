@@ -1,0 +1,27 @@
+---
+pagetitle: "Isidora Vidal — Galería"
+---
+
+# Galería
+
+Cartografía descriptiva de un panel de investigación en curso sobre entorno urbano en las 33 comunas de la Región Metropolitana de Santiago.
+
+![Mapa de referencia de las 33 comunas del área de estudio](/images/mapa_referencia_comunas.png){fig-cap="Mapa de referencia de las 33 comunas del área de estudio" fig-align="center" width="70%"}
+
+![Comparación de temperatura superficial terrestre, 2009 vs. 2020](/images/mapa_lst_comparacion_2009_2020.png){fig-cap="Comparación de temperatura superficial terrestre, 2009 vs. 2020" fig-align="center" width="70%"}
+
+![Densidad de población, 2020](/images/mapa_densidad_2020.png){fig-cap="Densidad de población, 2020" fig-align="center" width="70%"}
+
+![Distancia al centro de salud más cercano, 2019](/images/mapa_dist_salud_2019.png){fig-cap="Distancia al centro de salud más cercano, 2019" fig-align="center" width="70%"}
+
+![Patrones de migración, 2017](/images/mapa_migracion_2017.png){fig-cap="Patrones de migración, 2017" fig-align="center" width="70%"}
+
+![Dimensiones del índice de bienestar (BHT), 2017](/images/mapa_bht_dimensiones_2017.png){fig-cap="Dimensiones del índice de bienestar (BHT), 2017" fig-align="center" width="70%"}
+
+![Densidad de la red vial](/images/mapa_vias_densidad.png){fig-cap="Densidad de la red vial" fig-align="center" width="70%"}
+
+# Variaciones de Glaciares
+
+![Volcán Lanin](/images/area_estudio_glaciares.png){fig-cap="Área de estudio" fig-align="center" width="50%"}
+
+![Variaciones del área glaciar](/images/variaciones_glaciares.png){fig-cap="Variaciones del área glaciar" fig-align="center" width="50%"}

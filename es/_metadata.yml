@@ -1,0 +1,25 @@
+website:
+  navbar:
+  
+
+    left:
+      - text: Inicio
+        href: index.qmd
+
+      - text: Proyectos
+        href: projects.qmd
+
+      - text: Galería
+        href: projects/gallery.qmd
+
+      - text: Contacto
+        href: contact.qmd
+
+    right:
+      - text: 🌐 Idioma
+        menu:
+          - text: 🇪🇸 Español
+            href: index.qmd
+
+          - text: ᴇ ɴ English
+            href: ../en/index.qmd

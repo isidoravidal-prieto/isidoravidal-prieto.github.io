@@ -1,0 +1,26 @@
+---
+pagetitle: "Contenido de Humedad del Combustible Vegetal"
+---
+
+# Contenido de Humedad del Combustible Vegetal
+
+::: {.page-subtitle}
+**Random Forest · Sentinel-2 · Data Cube Chile**
+:::
+
+El Contenido de Humedad del Combustible Vegetal (FMC) mide cuánta agua contiene la vegetación viva, un indicador directo de qué tan fácilmente puede iniciar y mantener un incendio. Desarrollé un flujo de trabajo para generarlo en un parque nacional de Chile a partir de imágenes Sentinel-2, utilizando un modelo Random Forest entrenado originalmente con vegetación australiana, ya que no existe un producto FMC listo para Chile.
+
+![FMC al inicio de la temporada de incendios en comparación con su máximo a fines del verano](/images/fmc-seasonal-comparison.png)
+
+![Promedio mensual de FMC en el Parque Nacional Río Clarillo, 2024](/images/fmc-monthly-timeseries.png)
+
+### Cómo funciona
+
+- Cargar las bandas Sentinel-2 originales y enmascarar nubes, sombras y agua utilizando la Scene Classification Layer
+- Calcular NDVI y NDII, los dos índices requeridos por el modelo
+- Ejecutar el modelo Random Forest preentrenado píxel por píxel para generar una superficie continua de FMC
+- Diagnosticar la cobertura de nubes por escena para seleccionar fechas utilizables, ya que no existe un producto prefiltrado al que recurrir
+
+El resultado reproduce el patrón estacional esperado para un clima mediterráneo: la vegetación se seca hacia fines del verano y se recupera con las lluvias de invierno, lo que muestra que un modelo entrenado con tipos de combustible australianos puede transferirse razonablemente a la vegetación chilena.
+
+<a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/FMC_adaptado_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">Ver notebook en GitHub</a>
