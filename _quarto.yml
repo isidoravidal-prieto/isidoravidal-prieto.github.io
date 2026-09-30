@@ -21,10 +21,10 @@ website:
     right:
       - text: 🌐 Language
         menu:
-          - text: ᴇɴ English
+          - text:  English
             href: en/index.qmd
 
-          - text: 🇪🇸 Español
+          - text:  Español
             href: es/index.qmd
 
 format:

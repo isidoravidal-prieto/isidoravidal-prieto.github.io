@@ -4,7 +4,7 @@ pagetitle: "Isidora Vidal — Galería"
 
 # Galería
 
-Cartografía descriptiva de un panel de investigación en curso sobre entorno urbano en las 33 comunas de la Región Metropolitana de Santiago.
+Cartografías descriptivas desarrolladas en Rstudio de un panel de investigación en curso sobre entorno urbano en las 33 comunas de la Región Metropolitana de Santiago.
 
 ![Mapa de referencia de las 33 comunas del área de estudio](/images/mapa_referencia_comunas.png){fig-cap="Mapa de referencia de las 33 comunas del área de estudio" fig-align="center" width="70%"}
 

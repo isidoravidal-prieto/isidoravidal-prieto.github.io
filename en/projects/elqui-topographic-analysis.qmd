@@ -6,7 +6,7 @@ title: "Elqui River Basin Topographic Analysis"
 **Copernicus GLO-30 · Google Earth Engine · QGIS**
 :::
 
-Topographic analysis of the Elqui River Basin in northern Chile using a Copernicus GLO-30 digital elevation model accessed through Google Earth Engine. The project combines terrain visualization and elevation profiling to characterize the basin's elevation patterns and relief.
+Topographic analysis of the Elqui River Basin in northern Chile using a Copernicus GLO-30 digital elevation model accessed through Google Earth Engine.
 
 ![Topographic map of the Elqui River Basin](/images/Mapa_Elqui.jpg){fig-align="center" width="90%" style="margin-left: 1%;"}
 
@@ -14,26 +14,17 @@ Topographic analysis of the Elqui River Basin in northern Chile using a Copernic
 
 ### Methodology
 
-A Copernicus GLO-30 Digital Elevation Model (DEM) was accessed through Google Earth Engine and clipped to the Elqui River Basin.
-
-The elevation data were then processed in QGIS to create the final topographic visualization. The workflow included:
-
-- Hypsometric tint to represent elevation gradients across the basin
-- Hillshade to enhance terrain morphology and relief
-- Elevation profile lines digitized across selected sections of the basin
-- Elevation profiles generated from the DEM to visualize changes in elevation along each transect
-
-The final map was assembled in QGIS, combining the elevation raster, hillshade, basin boundary, elevation profile lines, coordinate grid, scale bar, north arrow, legend, and contextual map elements.
+- Copernicus GLO-30 DEM accessed through Google Earth Engine
+- Terrain visualization using hypsometric tint and hillshade
+- Elevation profiles generated along selected transects
+- Final cartographic layout developed in QGIS
 
 ### Results
 
-The final cartographic product provides a detailed view of the elevation structure and topographic variation of the Elqui River Basin. The combination of hypsometric tint and hillshade makes both elevation gradients and terrain morphology visible, while the elevation profiles provide cross-sectional views of selected areas of the basin.
-
-The map was designed as a clear cartographic representation of the basin's topography, suitable for communicating spatial patterns to both technical and non-technical audiences.
+A detailed topographic map of the Elqui River Basin showing elevation gradients, terrain morphology, and elevation profiles across selected sections of the basin.
 
 ### Tools & Data
 
 **Elevation data:** Copernicus GLO-30 DEM  
 **Data access:** Google Earth Engine  
-**Processing & cartography:** QGIS  
-**Analysis:** Terrain visualization and elevation profiling
+**Processing & cartography:** QGIS

@@ -1,39 +1,34 @@
 ---
-pagetitle: "Isidora Vidal — Monitoreo de Superficie de Agua"
+pagetitle: "Isidora Vidal — Monitoreo de Extensión de Agua"
 ---
 
-# Monitoreo de Superficie de Agua
+# Monitoreo de Extensión de Agua
 
 ::: {.page-subtitle}
 **Sentinel-2 · MNDWI · Data Cube Chile**
 :::
 
-La Laguna de Aculeo, en la Región Metropolitana de Chile, se secó completamente en 2018 después de años de sequía y sobreexplotación, convirtiéndose en uno de los símbolos más visibles de la escasez hídrica del país. Desde 2023 ha comenzado a recuperarse lentamente debido a mayores precipitaciones invernales, más recientemente después de un sistema frontal ocurrido en julio de 2026. Desarrollé un flujo de trabajo para monitorear directamente este cambio de superficie a partir de imágenes satelitales, siguiendo el marco del indicador 6.6.1 de los ODS de Naciones Unidas para el cambio de ecosistemas relacionados con el agua.
+Monitoreo de los cambios estacionales en la extensión de agua de la **Laguna de Aculeo, Chile**, mediante imágenes Sentinel-2 y el índice Modified Normalized Difference Water Index (MNDWI).
 
-La animación a continuación muestra cómo varía el índice de agua del lago (MNDWI) entre temporadas, haciendo visible su disminución y recuperación a lo largo del tiempo en lugar de mostrar solamente una comparación entre dos momentos.
-
-![Animación estacional del MNDWI mostrando el cambio de superficie del lago a lo largo del tiempo](/images/water_extent.gif){fig-align="center" width="70%"}
-
-Convertir ese índice en una superficie real permite obtener un valor concreto para monitorear, en lugar de depender únicamente de una impresión visual:
+![Animación estacional del MNDWI mostrando los cambios en la extensión de la laguna](/images/water_extent.gif){fig-align="center" width="70%"}
 
 ::: {.column-page}
-![Superficie de agua estacional en kilómetros cuadrados](/images/aculeo-extent-timeseries.png){fig-align="center" width="130%"}
+![Extensión estacional de agua en kilómetros cuadrados](/images/aculeo-extent-timeseries.png){fig-align="center" width="130%"}
 :::
 
-Finalmente, comparar los períodos más secos y más húmedos registrados permite identificar exactamente dónde la superficie de agua se expandió o permaneció de forma permanente, y no solo cuánto cambió:
+![Cambio en la extensión de agua entre los períodos de menor y mayor extensión](/images/aculeo-cambio-map.png){fig-align="center" width="70%"}
 
-![Zonas donde cambió la superficie de agua entre los períodos más secos y más húmedos registrados](/images/aculeo-cambio-map.png){fig-align="center" width="70%"}
+### Metodología
 
-### Cómo funciona
-
-- Cargar imágenes Sentinel-2 sobre el lago y calcular el Índice de Agua de Diferencia Normalizada Modificado (MNDWI), que permite separar el agua de la tierra de manera mucho más confiable que una simple inspección visual
-- Remuestrear la serie temporal de MNDWI a medianas estacionales para reducir el ruido causado por nubes y la variación de corto plazo
-- Animar la serie estacional para visualizar cómo ha variado la superficie de agua a lo largo del tiempo
-- Convertir la máscara de agua en una superficie en kilómetros cuadrados para cada momento, generando una serie temporal cuantitativa de extensión
-- Identificar la superficie mínima y máxima registrada y mapear exactamente dónde la superficie se expandió, desapareció o permaneció estable entre ambas
+- Imágenes Sentinel-2 y cálculo de MNDWI
+- Compuestos medianos estacionales para reducir variaciones asociadas a nubes
+- Clasificación de la extensión de agua y cálculo de superficie en km²
+- Comparación entre la mínima y máxima extensión registrada
 
 ### Resultados
 
-La serie temporal de extensión permite visualizar la disminución y recuperación parcial del lago mediante valores concretos, no solo mediante fotografías llamativas de antes y después. Es una demostración clara de cómo unas pocas operaciones con índices satelitales pueden transformar un problema ambiental conocido en algo medible y monitoreable a lo largo del tiempo, con aplicaciones que van mucho más allá de este lago.
+El flujo de trabajo cuantifica el **colapso y recuperación parcial de la superficie de agua de la Laguna de Aculeo**, combinando monitoreo temporal, estimación de superficie y análisis espacial de cambios.
+
+El análisis sigue el marco del **ODS 6.6.1 de Naciones Unidas** para el monitoreo de cambios en ecosistemas relacionados con el agua.
 
 <a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/Monitoreo_agua_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">Ver notebook en GitHub</a>

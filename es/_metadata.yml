@@ -18,8 +18,8 @@ website:
     right:
       - text: 🌐 Idioma
         menu:
-          - text: 🇪🇸 Español
+          - text:  Español
             href: index.qmd
 
-          - text: ᴇ ɴ English
+          - text:  English
             href: ../en/index.qmd

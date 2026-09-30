@@ -4,7 +4,7 @@ pagetitle: "Isidora Vidal — Gallery"
 
 # Gallery
 
-Descriptive cartography from an ongoing research project on the urban environment across the 33 communes of the Santiago Metropolitan Region.
+Descriptive cartography developed in RStudio an ongoing research project on the urban environment across the 33 communes of the Santiago Metropolitan Region.
 
 ![Reference map of the 33 communes in the study area](/images/mapa_referencia_comunas.png){fig-cap="Reference map of the 33 communes in the study area" fig-align="center" width="70%"}
 

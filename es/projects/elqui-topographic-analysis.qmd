@@ -6,7 +6,7 @@ title: "Análisis Topográfico de la Cuenca del Río Elqui"
 **Copernicus GLO-30 · Google Earth Engine · QGIS**
 :::
 
-Análisis topográfico de la cuenca del río Elqui, en el norte de Chile, utilizando un modelo digital de elevación Copernicus GLO-30 obtenido mediante Google Earth Engine. El proyecto combina la visualización del relieve y la generación de perfiles de elevación para caracterizar los patrones de altitud y el relieve de la cuenca.
+Análisis topográfico de la cuenca del río Elqui, en el norte de Chile, utilizando un modelo digital de elevación Copernicus GLO-30 obtenido mediante Google Earth Engine.
 
 ![Mapa topográfico de la cuenca del río Elqui](/images/Mapa_Elqui.jpg){fig-align="center" width="90%" style="margin-left: 1%;"}
 
@@ -14,26 +14,17 @@ Análisis topográfico de la cuenca del río Elqui, en el norte de Chile, utiliz
 
 ### Metodología
 
-Se utilizó un Modelo Digital de Elevación (DEM) Copernicus GLO-30 mediante Google Earth Engine y se recortó al área de la cuenca del río Elqui.
-
-Posteriormente, los datos de elevación fueron procesados en QGIS para crear la visualización topográfica final. El flujo de trabajo incluyó:
-
-- Tinte hipsométrico para representar los gradientes de elevación en la cuenca
-- Hillshade para resaltar la morfología y el relieve del terreno
-- Líneas de perfiles de elevación digitalizadas en secciones seleccionadas de la cuenca
-- Perfiles de elevación generados a partir del DEM para visualizar los cambios de altitud a lo largo de cada transecto
-
-El mapa final fue elaborado en QGIS, integrando el raster de elevación, hillshade, límite de la cuenca, líneas de perfiles de elevación, cuadrícula de coordenadas, barra de escala, flecha norte, leyenda y elementos cartográficos de contexto.
+- DEM Copernicus GLO-30 obtenido mediante Google Earth Engine
+- Visualización del relieve mediante tintas hipsométricas y hillshade
+- Generación de perfiles de elevación en transectos seleccionados
+- Elaboración de la cartografía final en QGIS
 
 ### Resultados
 
-El producto cartográfico final proporciona una visión detallada de la estructura altitudinal y la variación topográfica de la cuenca del río Elqui. La combinación del tinte hipsométrico y el hillshade permite visualizar tanto los gradientes de elevación como la morfología del terreno, mientras que los perfiles de elevación proporcionan vistas transversales de distintas áreas de la cuenca.
+Mapa topográfico detallado de la cuenca del río Elqui, mostrando gradientes de elevación, morfología del relieve y perfiles de elevación de sectores seleccionados.
 
-El mapa fue diseñado como una representación cartográfica clara de la topografía de la cuenca, adecuada para comunicar patrones espaciales tanto a audiencias técnicas como no técnicas.
-
-### Herramientas y Datos
+### Herramientas y datos
 
 **Datos de elevación:** DEM Copernicus GLO-30  
-**Acceso a los datos:** Google Earth Engine  
-**Procesamiento y cartografía:** QGIS  
-**Análisis:** Visualización del terreno y perfiles de elevación
+**Acceso a datos:** Google Earth Engine  
+**Procesamiento y cartografía:** QGIS
