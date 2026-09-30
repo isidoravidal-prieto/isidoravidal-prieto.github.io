@@ -2,7 +2,6 @@
 pagetitle: "Isidora Vidal — Geospatial Analyst"
 ---
 
-
 <div class="column-screen home-hero">
 <div class="home-hero-panel">
 
@@ -16,8 +15,10 @@ I'm a Geospatial Analyst and Geographer specializing in remote sensing, spatial 
 I work with satellite imagery and geospatial data to turn complex environmental questions into clear maps, models, and insights. My toolkit includes Google Earth Engine, Python, R, QGIS, and ArcGIS.
 
 My main areas of interest include remote sensing, GIS, geospatial workflow automation and optimization, and spatial analysis applied to climate, biodiversity, and environmental monitoring.
+</p>
 
-<a class="btn btn-primary" href="projects.qmd" role="button">View my projects</a>
-<a class="btn btn-outline-secondary" href="contact.qmd" role="button">Get in touch</a>
+<a class="btn btn-primary" href="projects.html" role="button">View my projects</a>
+<a class="btn btn-outline-secondary" href="contact.html" role="button">Get in touch</a>
+
 </div>
 </div>
