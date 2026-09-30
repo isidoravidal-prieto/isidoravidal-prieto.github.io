@@ -118,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-language">    
         <li>
     <a class="dropdown-item" href="../../en/index.html">
- <span class="dropdown-text">ᴇɴ English</span></a>
+ <span class="dropdown-text">English</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../es/index.html">
- <span class="dropdown-text">🇪🇸 Español</span></a>
+ <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
@@ -149,15 +149,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-subtitle">
 <p><strong>Sentinel-2 · MNDWI · Data Cube Chile</strong></p>
 </div>
-<p>Laguna de Aculeo, in Chile’s Metropolitan Region, dried up completely in 2018 after years of drought and overextraction, becoming one of the country’s most visible symbols of water scarcity. Since 2023 it has been slowly recovering with heavier winter rains, most recently after a frontal storm in July 2026. I built a pipeline to track that extent change directly from satellite imagery, following the UN SDG 6.6.1 indicator framework for water-related ecosystem change.</p>
-<p>The animation below shows the lake’s water index (MNDWI) shifting season by season, making the collapse and recovery visible over time rather than as a single before-and-after snapshot.</p>
+<p>Monitoring seasonal changes in the water extent of <strong>Laguna de Aculeo, Chile</strong>, using Sentinel-2 imagery and the Modified Normalized Difference Water Index (MNDWI).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../..\images/water_extent.gif" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption>Seasonal MNDWI animation showing the lake’s extent shifting over time</figcaption>
 </figure>
 </div>
-<p>Turning that index into an actual area gives a concrete number to track instead of just a visual impression:</p>
 <div class="page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -166,26 +164,25 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<p>Finally, comparing the driest and wettest periods on record shows exactly where the water surface expanded or stayed permanent, not just how much:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../..\images/aculeo-cambio-map.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Where the water surface changed between the driest and wettest periods on record</figcaption>
+<figcaption>Water extent change between the driest and wettest periods</figcaption>
 </figure>
 </div>
-<section id="how-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-works">How it works</h3>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
 <ul>
-<li>Load Sentinel-2 imagery over the lake and compute the Modified Normalized Difference Water Index (MNDWI), which separates water from land far more reliably than a simple visual check</li>
-<li>Resample the MNDWI time series to seasonal medians to smooth out cloud noise and short-term variation</li>
-<li>Animate the seasonal series to visualize how the water surface has moved over time</li>
-<li>Convert the water mask to an area in square kilometers at each time step, producing a quantitative extent time series</li>
-<li>Identify the minimum and maximum extent on record and map exactly where the surface expanded, disappeared, or stayed stable between them</li>
+<li>Sentinel-2 imagery and MNDWI calculation</li>
+<li>Seasonal median composites to reduce cloud-related variability</li>
+<li>Water extent classification and area calculation in km²</li>
+<li>Comparison of minimum and maximum recorded water extent</li>
 </ul>
 </section>
 <section id="results" class="level3">
 <h3 class="anchored" data-anchor-id="results">Results</h3>
-<p>The extent time series makes the lake’s collapse and partial recovery visible in concrete numbers, not just striking before-and-after photos. It’s a clear demonstration of how a few lines of satellite index math can turn a well known environmental story into something measurable and trackable over time, useful well beyond this one lake.</p>
+<p>The workflow quantifies the <strong>collapse and partial recovery of Laguna de Aculeo’s water surface</strong>, combining temporal monitoring, area estimates, and spatial change mapping.</p>
+<p>The analysis follows the <strong>UN SDG 6.6.1 framework</strong> for monitoring changes in water-related ecosystems.</p>
 <p><a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/Monitoreo_agua_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">View notebook on GitHub</a></p>
 
 

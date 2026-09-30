@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contenido de Humedad del Combustible Vegetal – Portfolio</title>
+<title>Contenido de Humedad del Combustible – Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-language">    
         <li>
     <a class="dropdown-item" href="../../en/index.html">
- <span class="dropdown-text">ᴇɴ English</span></a>
+ <span class="dropdown-text">English</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../es/index.html">
- <span class="dropdown-text">🇪🇸 Español</span></a>
+ <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
@@ -144,33 +144,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="contenido-de-humedad-del-combustible-vegetal" class="level1">
-<h1>Contenido de Humedad del Combustible Vegetal</h1>
+<section id="contenido-de-humedad-del-combustible" class="level1">
+<h1>Contenido de Humedad del Combustible</h1>
 <div class="page-subtitle">
 <p><strong>Random Forest · Sentinel-2 · Data Cube Chile</strong></p>
 </div>
-<p>El Contenido de Humedad del Combustible Vegetal (FMC) mide cuánta agua contiene la vegetación viva, un indicador directo de qué tan fácilmente puede iniciar y mantener un incendio. Desarrollé un flujo de trabajo para generarlo en un parque nacional de Chile a partir de imágenes Sentinel-2, utilizando un modelo Random Forest entrenado originalmente con vegetación australiana, ya que no existe un producto FMC listo para Chile.</p>
+<p>Estimación del Contenido de Humedad del Combustible (FMC) a partir de imágenes Sentinel-2 mediante un modelo Random Forest previamente entrenado, adaptado a la vegetación de un parque nacional chileno.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../..\images/fmc-seasonal-comparison.png" class="img-fluid figure-img"></p>
-<figcaption>FMC al inicio de la temporada de incendios en comparación con su máximo a fines del verano</figcaption>
+<figcaption>FMC al inicio de la temporada de incendios versus su máximo a fines del verano</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../..\images/fmc-monthly-timeseries.png" class="img-fluid figure-img"></p>
-<figcaption>Promedio mensual de FMC en el Parque Nacional Río Clarillo, 2024</figcaption>
+<figcaption>FMC promedio mensual en el Parque Nacional Río Clarillo, 2024</figcaption>
 </figure>
 </div>
-<section id="cómo-funciona" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-funciona">Cómo funciona</h3>
+<section id="metodología" class="level3">
+<h3 class="anchored" data-anchor-id="metodología">Metodología</h3>
 <ul>
-<li>Cargar las bandas Sentinel-2 originales y enmascarar nubes, sombras y agua utilizando la Scene Classification Layer</li>
-<li>Calcular NDVI y NDII, los dos índices requeridos por el modelo</li>
-<li>Ejecutar el modelo Random Forest preentrenado píxel por píxel para generar una superficie continua de FMC</li>
-<li>Diagnosticar la cobertura de nubes por escena para seleccionar fechas utilizables, ya que no existe un producto prefiltrado al que recurrir</li>
+<li>Imágenes Sentinel-2 con enmascaramiento de nubes, sombras y agua</li>
+<li>Cálculo de NDVI y NDII</li>
+<li>Estimación de FMC a nivel de píxel mediante Random Forest</li>
+<li>Análisis mensual y estacional del FMC en el Parque Nacional Río Clarillo</li>
 </ul>
-<p>El resultado reproduce el patrón estacional esperado para un clima mediterráneo: la vegetación se seca hacia fines del verano y se recupera con las lluvias de invierno, lo que muestra que un modelo entrenado con tipos de combustible australianos puede transferirse razonablemente a la vegetación chilena.</p>
+</section>
+<section id="resultados" class="level3">
+<h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
+<p>El flujo de trabajo capturó el patrón estacional esperado de la vegetación mediterránea, con <strong>menores valores de FMC durante fines del verano y recuperación posterior a las precipitaciones de invierno</strong>.</p>
+<p>El modelo fue originalmente entrenado con vegetación australiana y adaptado para su aplicación en Chile, proporcionando una alternativa para estimar FMC donde no existía un producto nacional disponible.</p>
 <p><a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/FMC_adaptado_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">Ver notebook en GitHub</a></p>
 
 

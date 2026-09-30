@@ -118,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-language">    
         <li>
     <a class="dropdown-item" href="../../en/index.html">
- <span class="dropdown-text">ᴇɴ English</span></a>
+ <span class="dropdown-text">English</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../es/index.html">
- <span class="dropdown-text">🇪🇸 Español</span></a>
+ <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-subtitle">
 <p><strong>RUSLE · Google Earth Engine · QGIS</strong></p>
 </div>
-<p>Trabajo freelance para un cliente de ingeniería ambiental, enfocado en el mapeo del riesgo de erosión hídrica del suelo en cuatro departamentos de Guatemala (Alta Verapaz, Quiché, Sololá y Sacatepéquez) utilizando la metodología RUSLE (Revised Universal Soil Loss Equation), procesada completamente en Google Earth Engine y finalizada en QGIS para la elaboración cartográfica.</p>
+<p>Mapeo del riesgo de erosión hídrica del suelo en cuatro departamentos de Guatemala mediante la metodología RUSLE, con procesamiento en Google Earth Engine y elaboración de la cartografía final en QGIS.</p>
 <div class="quarto-figure quarto-figure-center" style="margin-left: 1%;">
 <figure class="figure">
 <p><img src="../..\images/Mapa_Erosion_Sacatepequez.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -157,24 +157,28 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <hr>
-<section id="cómo-funciona" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-funciona">Cómo funciona</h3>
-<p>RUSLE estima la pérdida media anual de suelo como el producto de cinco factores: erosividad de las precipitaciones, erodabilidad del suelo, longitud e inclinación de la pendiente, cobertura vegetal y prácticas de conservación. Cada factor se obtuvo a partir de un conjunto de datos público diferente y se integró directamente en Earth Engine:</p>
+<section id="metodología" class="level3">
+<h3 class="anchored" data-anchor-id="metodología">Metodología</h3>
 <ul>
-<li>Erosividad de las precipitaciones a partir de 25 años de precipitación diaria de CHIRPS, convertida mediante el Índice de Fournier Modificado</li>
-<li>Erodabilidad del suelo a partir de datos de textura y carbono orgánico de SoilGrids</li>
-<li>Pendiente y longitud de flujo a partir de Copernicus DEM y HydroSHEDS, limitadas para evitar la sobreestimación cerca de los cauces</li>
-<li>Cobertura vegetal a partir de 10 años de NDVI de Sentinel-2</li>
-<li>Las prácticas de conservación se mantuvieron en un nivel base neutral, debido a la ausencia de datos de terreno</li>
+<li>Evaluación del riesgo de erosión mediante RUSLE</li>
+<li>Erosividad de las precipitaciones a partir de datos CHIRPS</li>
+<li>Erodibilidad del suelo a partir de SoilGrids</li>
+<li>Factores topográficos a partir de Copernicus DEM y HydroSHEDS</li>
+<li>Cobertura vegetal mediante NDVI de Sentinel-2</li>
+<li>Procesamiento y análisis en Google Earth Engine</li>
 </ul>
 </section>
 <section id="resultados" class="level3">
 <h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
-<p>Para Sacatepéquez, la pérdida media anual de suelo fue de 3,66 toneladas/ha/año, clasificada como erosión ligera según los estándares de FAO/MAGA. Sin embargo, el patrón no es uniforme: aproximadamente el 42 % del departamento presenta valores iguales o inferiores a 1 tonelada/ha/año, mientras que el 22 % supera las 10 toneladas/ha/año, concentrándose en terrenos con pendientes pronunciadas y escasa cobertura vegetal. El mismo flujo de trabajo se aplicó en los cuatro departamentos, proporcionando al cliente una base consistente y reproducible para comparar el riesgo de erosión entre paisajes con características muy diferentes.</p>
+<p>El flujo de trabajo se aplicó en <strong>Alta Verapaz, Quiché, Sololá y Sacatepéquez</strong>, generando una base consistente para comparar el riesgo de erosión entre distintos paisajes.</p>
+<p>En <strong>Sacatepéquez</strong>, la pérdida media de suelo estimada fue de <strong>3,66 toneladas/ha/año</strong>, con mayores tasas de erosión concentradas en áreas de pendientes pronunciadas y baja cobertura vegetal.</p>
 </section>
-<section id="nota" class="level3">
-<h3 class="anchored" data-anchor-id="nota">Nota</h3>
-<p>Cada insumo de RUSLE presenta simplificaciones conocidas que es importante explicitar: las áreas sin datos de suelo se completaron utilizando promedios departamentales, el factor de longitud de pendiente utilizó un exponente fijo en lugar de uno variable según la pendiente, y los insumos con diferentes resoluciones nativas fueron remuestreados a una cuadrícula común de 10 m, lo que puede generar agrupaciones de valores idénticos en zonas de baja erosión. Estas simplificaciones no modifican el patrón general, pero son relevantes para cualquier interpretación de los valores absolutos y no solo de las zonas de riesgo relativo.</p>
+<section id="herramientas-y-datos" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-y-datos">Herramientas y datos</h3>
+<p><strong>Método:</strong> RUSLE<br>
+<strong>Datos:</strong> CHIRPS · SoilGrids · Copernicus DEM · HydroSHEDS · Sentinel-2<br>
+<strong>Procesamiento:</strong> Google Earth Engine<br>
+<strong>Cartografía:</strong> QGIS</p>
 <p><a href="https://github.com/isidoravidal-prieto/guatemala-erosion-rusle/blob/main/RUSLE_sacatepequez.js" class="btn btn-outline-dark btn-sm" target="_blank">Ver código en GitHub</a></p>
 
 

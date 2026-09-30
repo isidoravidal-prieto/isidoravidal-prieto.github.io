@@ -118,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-language">    
         <li>
     <a class="dropdown-item" href="../../en/index.html">
- <span class="dropdown-text">ᴇɴ English</span></a>
+ <span class="dropdown-text">English</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../es/index.html">
- <span class="dropdown-text">🇪🇸 Español</span></a>
+ <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
@@ -149,29 +149,26 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-subtitle">
 <p><strong>Sentinel-2 · dNBR · Data Cube Chile</strong></p>
 </div>
-<p>La severidad de un incendio deja una firma espectral característica: la vegetación sana y la vegetación quemada reflejan la luz de manera muy diferente en las bandas del infrarrojo cercano y del infrarrojo de onda corta. El Índice Normalizado de Quema (NBR) captura esta diferencia y, al comparar el NBR antes y después de un incendio, el Delta NBR (dNBR) permite identificar las áreas afectadas por la quema.</p>
+<p>Mapeo de áreas quemadas mediante imágenes Sentinel-2 pre y post incendio y el índice Normalized Burn Ratio (NBR).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../..\images/burn-area-dnbr.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Mapa de dNBR del incendio de San Carlos de Apoquindo, Las Condes, diciembre de 2025</figcaption>
+<figcaption>Mapa dNBR del incendio de San Carlos de Apoquindo, Las Condes, diciembre de 2025</figcaption>
 </figure>
 </div>
-<section id="cómo-funciona" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-funciona">Cómo funciona</h3>
+<section id="metodología" class="level3">
+<h3 class="anchored" data-anchor-id="metodología">Metodología</h3>
 <ul>
-<li>Construir un compuesto de NBR de referencia a partir de imágenes Sentinel-2 previas al incendio</li>
-<li>Calcular el NBR posterior al incendio a partir de imágenes capturadas después del evento</li>
-<li>Restar ambos valores para obtener el dNBR: los valores positivos indican vegetación quemada, mientras que los valores negativos o cercanos a cero indican áreas no quemadas</li>
-<li>Aplicar un umbral al dNBR para clasificar los píxeles como quemados o no quemados y luego calcular la superficie quemada total</li>
+<li>Compuestos NBR Sentinel-2 pre y post incendio</li>
+<li>Cálculo de dNBR para detectar pérdida de vegetación</li>
+<li>Clasificación de áreas quemadas mediante umbral</li>
+<li>Estimación de superficie quemada en hectáreas</li>
 </ul>
 </section>
 <section id="resultados" class="level3">
 <h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
-<p>Aplicado al incendio de San Carlos de Apoquindo (Las Condes, diciembre de 2025), utilizando un umbral de dNBR de +0,3. La superficie quemada estimada, 1.024 ha, resultó muy cercana a la cifra oficial de CONAF de 1.012 ha para el mismo evento, proporcionando una comprobación de consistencia para un método sin calibración específica para el sitio.</p>
-</section>
-<section id="nota" class="level3">
-<h3 class="anchored" data-anchor-id="nota">Nota</h3>
-<p>El umbral de +0,3 se mantuvo de la metodología original sin probar alternativas específicas para este incendio. <a href="https://ieeexplore.ieee.org/document/8518449">Rahman et al.&nbsp;(2018)</a> sugieren +0,1 como umbral general para Sentinel-2, y diferentes tipos de vegetación pueden requerir valores distintos. El hecho de que el resultado se aproximara a la cifra oficial es alentador, pero una versión más rigurosa de este flujo de trabajo debería probar un rango de umbrales frente a datos de referencia en terreno, en lugar de depender de uno solo.</p>
+<p>Para el <strong>incendio de San Carlos de Apoquindo (Las Condes, diciembre de 2025)</strong>, un umbral dNBR de <strong>+0,3</strong> produjo una superficie quemada estimada de <strong>1.024 ha</strong>, frente a las <strong>1.012 ha</strong> reportadas por CONAF.</p>
+<p>El flujo de trabajo fue desarrollado utilizando <strong>Data Cube Chile</strong> y puede reproducirse mediante el notebook disponible a continuación.</p>
 <p><a href="https://github.com/isidoravidal-prieto/deamericas-notebooks/blob/main/adaptado_ES/Areas_quemadas_Chile.ipynb" class="btn btn-outline-dark btn-sm" target="_blank">Ver notebook en GitHub</a></p>
 
 

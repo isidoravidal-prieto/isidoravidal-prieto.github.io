@@ -118,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-language">    
         <li>
     <a class="dropdown-item" href="../../en/index.html">
- <span class="dropdown-text">ᴇɴ English</span></a>
+ <span class="dropdown-text">English</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../es/index.html">
- <span class="dropdown-text">🇪🇸 Español</span></a>
+ <span class="dropdown-text">Español</span></a>
   </li>  
     </ul>
   </li>
@@ -149,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-subtitle">
 <p><strong>RUSLE · Google Earth Engine · QGIS</strong></p>
 </div>
-<p>Freelance engagement for an environmental engineering client, mapping soil water erosion risk across four departments in Guatemala (Alta Verapaz, Quiché, Sololá and Sacatepéquez) using the RUSLE (Revised Universal Soil Loss Equation) methodology, entirely processed in Google Earth Engine and finished in QGIS for cartographic delivery.</p>
+<p>Mapping soil water erosion risk across four departments in Guatemala using the RUSLE methodology, with the analysis processed in Google Earth Engine and the final cartography developed in QGIS.</p>
 <div class="quarto-figure quarto-figure-center" style="margin-left: 1%;">
 <figure class="figure">
 <p><img src="../..\images/Mapa_Erosion_Sacatepequez.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -157,24 +157,28 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <hr>
-<section id="how-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-works">How it works</h3>
-<p>RUSLE estimates average annual soil loss as the product of five factors: rainfall erosivity, soil erodibility, slope length and steepness, vegetation cover, and conservation practices. Each factor was derived from a different public dataset and combined natively in Earth Engine:</p>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
 <ul>
-<li>Rainfall erosivity from 25 years of CHIRPS daily precipitation, converted via the Modified Fournier Index</li>
-<li>Soil erodibility from SoilGrids texture and organic carbon data</li>
-<li>Slope and flow length from Copernicus DEM and HydroSHEDS, capped to avoid overestimation near stream channels</li>
-<li>Vegetation cover from 10 years of Sentinel-2 NDVI</li>
-<li>Conservation practices held at a neutral baseline, in the absence of field survey data</li>
+<li>RUSLE-based soil erosion risk assessment</li>
+<li>Rainfall erosivity from CHIRPS precipitation data</li>
+<li>Soil erodibility from SoilGrids</li>
+<li>Terrain factors from Copernicus DEM and HydroSHEDS</li>
+<li>Vegetation cover from Sentinel-2 NDVI</li>
+<li>Analysis and processing in Google Earth Engine</li>
 </ul>
 </section>
 <section id="results" class="level3">
 <h3 class="anchored" data-anchor-id="results">Results</h3>
-<p>For Sacatepéquez, average annual soil loss came out to 3.66 tons/ha/year, classified as light erosion under FAO/MAGA standards, though the picture isn’t uniform: about 42% of the department sits at or below 1 ton/ha/year, while 22% exceeds 10 tons/ha/year, concentrated in steep, sparsely vegetated terrain. The same workflow was applied across all four departments, giving the client a consistent, reproducible basis for comparing erosion risk across very different landscapes.</p>
+<p>The workflow was applied across <strong>Alta Verapaz, Quiché, Sololá, and Sacatepéquez</strong>, providing a consistent basis for comparing erosion risk across different landscapes.</p>
+<p>For <strong>Sacatepéquez</strong>, estimated average soil loss was <strong>3.66 tons/ha/year</strong>, with higher erosion rates concentrated in steep and sparsely vegetated areas.</p>
 </section>
-<section id="note" class="level3">
-<h3 class="anchored" data-anchor-id="note">Note</h3>
-<p>Every RUSLE input carries known simplifications, worth naming rather than hiding: soil data gaps were filled with departmental averages, the slope-length factor used a fixed exponent rather than a slope-variable one, and inputs at different native resolutions were resampled to a common 10 m grid, which can cluster identical values in low-erosion zones. None of these change the overall pattern, but they matter for anyone using the absolute numbers rather than the relative risk zones.</p>
+<section id="tools-data" class="level3">
+<h3 class="anchored" data-anchor-id="tools-data">Tools &amp; Data</h3>
+<p><strong>Method:</strong> RUSLE<br>
+<strong>Data:</strong> CHIRPS · SoilGrids · Copernicus DEM · HydroSHEDS · Sentinel-2<br>
+<strong>Processing:</strong> Google Earth Engine<br>
+<strong>Cartography:</strong> QGIS</p>
 <p><a href="https://github.com/isidoravidal-prieto/guatemala-erosion-rusle/blob/main/RUSLE_sacatepequez.js" class="btn btn-outline-dark btn-sm" target="_blank">View code on GitHub</a></p>
 
 
